@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- E-Commerce Service website design -->
+    <!-- figma template file  https://www.figma.com/file/gNq699ZxDndKRCE3Du9ELx/Figma-ecommerce-UI-Kit-(web-%26-mobile)-(Community)?node-id=0-1&t=LJvKz3r8LdTsxKYj-0  -->
+    <!-- Using bootstrap -->
+    <!-- Using API, https://dummyjson.com/docs -->
+    <!-- Author Ashadul Islam  -->
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shop </title>
+     <!-- bootstrap cdn  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <!-- font-awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+     <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-body-tertiary">
+    <section class="nav-menu ">
+        <div class="container bg-body">
+            <div class="row" id="top-navbar">  
+                <nav class="navbar d-flex justify-content-between align-items-center">
+                    <div class="col-03"><a class="navbar-brand ps-2" href="./index.html"><img src="./assets/img/logo/logo-colored.png" alt=""></a></div>
+
+                    <div class="col-6  border-success ">
+                        <form action="#" class="d-flex align-items-center justify-content-sm-between">
+                            <div class="col-6">
+                                <input type="search" class="form-control border-primary rounded-0 rounded-start">
+                            </div>
+                            <div class="col-6">
+                                <select name="selectItem" class="btn btn-outline-primary rounded-0" id="">
+                                    <option value="null">ALL category </option>
+                                    <option value="mobile">Mobile</option>
+                                    <option value="laptop">Laptop</option>
+                                    <option value="watch">Watch</option>
+                                    <option value="camera">Camera</option>
+                                    <option value="furniture">Furniture</option>
+                                    <option value="kitchen ">Kitchen</option>
+                                </select>
+                                <button class="btn btn-outline-primary px-4 rounded-0 rounded-end" type="submit">Search</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="col-3">
+                        <ul class="list-unstyled me-auto mb-2 mb-lg-0 pe-3 d-flex justify-content-between align-items-center">
+                            <li class="nav-item">
+                              <a class="nav-link active text-center"  href="#"><i class="fa-regular fa-user"></i> <br><span>Profile</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link  text-center" href="#"><i class="fa-regular fa-comment-dots"></i></i><br><span>Message</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link  text-center"  href="#"><i class="fa-regular fa-heart"></i></i> <br><span>Order</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link  text-center"  href="#"><i class="fa-solid fa-cart-arrow-down"></i> <br><span>Cart</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <hr class="mb-0">
+        <div class="container bg-body">
+            <div class="main-menu row ">  
+                    <nav class="navbar navbar-expand-lg">
+                            <div class="col-9 d-flex align-items-center">
+                                <a class="navbar-brand" href="#" ><i class="fa-solid fa-bars"></i></a>
+
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex">
+                                  <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">All category</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#">Hot offers</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#">Gift boxes</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#">New arrival</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#"> Popular </a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#">Help</a>
+                                  </li>
+                                  <!-- <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      Dropdown
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item" href="#">Action</a></li>
+                                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                                      <li><hr class="dropdown-divider"></li>
+                                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link disabled">Disabled</a>
+                                  </li> -->
+                                </ul>
+                            </div>
+                            <div class="col-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="select-language">
+                                        <select name="language" id="" class="border-0">
+                                            <option value="english">English</option>
+                                            <option value="bangla">Bangla</option>
+                                            <option value="hindi">Hindi</option>
+                                            <option value="urdo">Urdo</option>
+                                        </select>
+                                    </div>
+                                    <div class="select-currency">
+                                        <select name="currency" id="" class="border-0">
+                                            <option value="usd">USD</option>
+                                            <option value="bdt">BDT</option>
+                                            <option value="inr">INR</option>
+                                            <option value="pkr">PKR</option>
+                                        </select>
+                                    </div>
+                                    <div class="ship-to d-flex justify-content-between align-items-center">
+                                        <p class="my-0 p-1">Ship to</p>
+                                        <select name="shipTo" id="" class="border-0">
+                                            <option value="uk">Uk</option>
+                                            <!-- <option value="bd">Bangladesh</option> -->
+                                            <option value="usa">USA</option>
+                                            <option value="IN">India</option>
+                                            <option value="IR">Iran</option>
+                                            <option value="IQ">Iraq</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                    </nav> 
+            </div>        
+        </div>
+        <hr class="m-0">
+        <div class="">
+            <div class="container bg-body">
+                <div class="row py-5 g-1 ">
+
+                    <div class="side-menu col-3">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">Automobiles</a>
+                            <a href="#" class="list-group-item list-group-item-action">Clothes and wear</a>
+                            <a href="#" class="list-group-item list-group-item-action">Home interiors</a>
+                            <a href="#" class="list-group-item list-group-item-action">Computer and Tech</a>
+                            <a href="#" class="list-group-item list-group-item-action">Tools, Equipments</a>
+                            <a href="#" class="list-group-item list-group-item-action">Sports and outdoor</a>
+                            <a href="#" class="list-group-item list-group-item-action">Animal and pets</a>
+                            <a href="#" class="list-group-item list-group-item-action">Machinery tools</a>
+                            <a href="#" class="list-group-item list-group-item-action">More category</a>
+                        </div>
+                    </div>
+
+                    <div class="top-banner col-7">
+                        <div class="banner">
+                            <div class="banner-content">
+                                <p class="fa-xl fw-normal pt-5 ps-5">Latest trending</p>
+                                <h3 class="fa-2x fw-medial mt-3 ps-5">Electronic items</h3>
+                                <button class="btn btn-light fa-1x mt-3 ms-5">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user col-2">
+
+                        <div class="cord text-bg-light rounded p-2">
+                            <div class="cord-body">
+                                <div class="d-flex mb-3">
+                                    <img src="assets/img/Avatar.png" class="me-2 card-img" alt="">
+                                    <h5 class="card-title fa-1xl">Hi, user let's get stated </h5>
+                                </div>
+                                <button class="btn btn-primary px-5 my-1">Join now</button>
+                                <button class="btn btn-light bg-white px-5 my-1">Join now</button>
+                            </div>
+                        </div>
+
+                        <div class="card text-bg-warning rounded p-2 border-0 mt-2">
+                            <p class="text-white"> Get us $10 off with a new supplier</p>
+                        </div>
+
+                        <div class="card text-bg-info rounded p-2 border-0 mt-2">
+                            <p class="text-white"> Send quotes with supplier preferences </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="discount-products my-4 py-2">
+        <div class="container bg-body rounded py-3">
+            <div class="row">
+                <div class="col-3">
+                    <h4 class="fa-1xl ps-3 pt-5 pb-0">Deals and offer </h4>
+                    <p class="text-muted p-3 pt-0">Hygiene Equipments</p>
+                    <div class="count-down d-flex align-items-center justify-content-evenly">
+                        <div class="days bg-dark-subtle p-2 rounded text-center "><h5 class="fa-1xl fw-medium lh-0 mb-0">04</h5> <span class="lh-0 mt-0">Days</span></div>
+                        <div class="hour bg-dark-subtle p-2 rounded text-center "><h5 class="fa-1xl fw-medium lh-0 mb-0">13</h5> <span class="lh-0 mt-0">Hour</span></div>
+                        <div class="min bg-dark-subtle p-2 rounded text-center "><h5 class="fa-1xl fw-medium lh-0 mb-0"> &nbsp;34&nbsp; </h5> <span class="lh-0 mt-0">&nbsp;Min&nbsp;</span></div>
+                        <div class="sec bg-dark-subtle p-2 rounded text-center "><h5 class="fa-1xl fw-medium lh-0 mb-0"> &nbsp;20&nbsp; </h5> <span class="lh-0 mt-0"> &nbsp;Sec&nbsp;</span></div>
+                    </div>
+                </div>
+                <div class="col-9 d-flex text-center">
+
+                    <div class="card p-3 w-100">
+                        <div class="card-image-top"><img src="assets/img/products/tech/03.png" alt=""></div>
+                        <h4 class="card-title fa-1x">Smart watches </h4>
+                        <p class="text-danger">-25%</p>
+                    </div>
+
+                    <div class="card p-3 w-100">
+                        <div class="card-image-top"><img src="assets/img/products/tech/03.png" alt=""></div>
+                        <h4 class="card-title fa-1x">Smart watches </h4>
+                        <p class="text-danger">-25%</p>
+                    </div>
+
+                    <div class="card p-3 w-100">
+                        <div class="card-image-top"><img src="assets/img/products/tech/03.png" alt=""></div>
+                        <h4 class="card-title fa-1x">Smart watches </h4>
+                        <p class="text-danger">-25%</p>
+                    </div>
+
+                    <div class="card p-3 w-100">
+                        <div class="card-image-top"><img src="assets/img/products/tech/03.png" alt=""></div>
+                        <h4 class="card-title fa-1x">Smart watches </h4>
+                        <p class="text-danger">-25%</p>
+                    </div>
+
+                    <div class="card p-3 w-100">
+                        <div class="card-image-top"><img src="assets/img/products/tech/03.png" alt=""></div>
+                        <h4 class="card-title fa-1x">Smart watches </h4>
+                        <p class="text-danger">-25%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="Furniture my-4 py-2">
+        <div class="container bg-body rounded py-3">
+            <div class="row g-0">
+                <div class="col-3 ">
+                    <div class="furniture-banner">
+                        <h4 class="fa-1xl ps-3 pt-5 pb-2">Home and <br> outdoor </h4>
+                        <button class="btn btn-light ms-3">Source now</button>
+                    </div>
+                </div>
+                <div class="col-9 ">
+                    <div class="furniture-products-list-up d-flex">
+                        <div class="card p-2 w-100 rounded-0">
+                            <div class="product-item d-flex align-items-center justify-content-between ">
+                                <div class="product-details">
+                                <p class="fa-1xl">Soft chairs </p>
+                                <p class="text-muted fa-1xl">From <br> USD 19</p>
+                                </div>
+                                <div class="product-img">
+                                    <img src="assets/img/products/furniture/04.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card p-2 w-100 rounded-0">
+                            <div class="product-item d-flex align-items-center justify-content-between ">
+                                <div class="product-details">
+                                <p class="fa-1xl">Soft chairs </p>
+                                <p class="text-muted fa-1xl">From <br> USD 19</p>
+                                </div>
+                                <div class="product-img">
+                                    <img src="assets/img/products/furniture/04.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card p-2 w-100 rounded-0">
+                            <div class="product-item d-flex align-items-center justify-content-between ">
+                                <div class="product-details">
+                                <p class="fa-1xl">Soft chairs </p>
+                                <p class="text-muted fa-1xl">From <br> USD 19</p>
+                                </div>
+                                <div class="product-img">
+                                    <img src="assets/img/products/furniture/04.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card p-2 w-100 rounded-0">
+                            <div class="product-item d-flex align-items-center justify-content-between ">
+                                <div class="product-details">
+                                <p class="fa-1xl">Soft chairs </p>
+                                <p class="text-muted fa-1xl">From <br> USD 19</p>
+                                </div>
+                                <div class="product-img">
+                                    <img src="assets/img/products/furniture/04.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="furniture-products-list-down d-flex">
+                        <div class="card p-2 w-100 rounded-0">
+                            <div class="product-item d-flex align-items-center justify-content-between ">
+                                <div class="product-details">
+                                    <p class="fa-1xl">Soft chairs </p>
+                                    <p class="text-muted fa-1xl">From <br> USD 19</p>
+                                </div>
+                                <div class="product-img ">
+                                    <img src="assets/img/products/furniture/04.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card p-2 w-100 rounded-0">
+                            <div class="product-item d-flex align-items-center justify-content-between ">
+                                <div class="product-details">
+                                <p class="fa-1xl">Soft chairs </p>
+                                <p class="text-muted fa-1xl">From <br> USD 19</p>
+                                </div>
+                                <div class="product-img">
+                                    <img src="assets/img/products/furniture/04.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card p-2 w-100 rounded-0">
+                            <div class="product-item d-flex align-items-center justify-content-between ">
+                                <div class="product-details">
+                                <p class="fa-1xl">Soft chairs </p>
+                                <p class="text-muted fa-1xl">From <br> USD 19</p>
+                                </div>
+                                <div class="product-img">
+                                    <img src="assets/img/products/furniture/04.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card p-2 w-100 rounded-0">
+                            <div class="product-item d-flex align-items-center justify-content-between ">
+                                <div class="product-details">
+                                <p class="fa-1xl">Soft chairs </p>
+                                <p class="text-muted fa-1xl">From <br> USD 19</p>
+                                </div>
+                                <div class="product-img">
+                                    <img src="assets/img/products/furniture/04.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="electronic_accessories  my-4 py-2">
+        <div class="container bg-body rounded py-3">
+            <div class="row g-0">
+                <div class="col-3 ">
+                    <div class="electronic_accessories_banner">
+                        <h4 class="fa-1xl ps-3 pt-5 pb-2">Consumer <br> Electronic and <br> gadgets </h4>
+                        <button class="btn btn-light ms-3">Source now</button>
+                    </div>
+                </div>
+                <div class="col-9 ">
+                    <div class="electronic_accessories-list-up d-flex">
+                        <div class="card p-2 w-100 rounded-0">
+                            <div class="product-item d-flex align-items-center justify-content-between ">
+                                <div class="product-details">
+                                <p class="fa-1xl">Soft chairs </p>
+                                <p class="text-muted fa-1xl">From <br> USD 19</p>
+                                </div>
+                                <div class="product-img">
+                                    <img src="assets/img/products/furniture/04.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card p-2 w-100 rounded-0">
+                            <div class="product-item d-flex align-items-center justify-content-between ">
+                                <div class="product-details">
+                                <p class="fa-1xl">Soft chairs </p>
+                                <p class="text-muted fa-1xl">From <br> USD 19</p>
+                                </div>
+                                <div class="product-img">
+                                    <img src="assets/img/products/furniture/04.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card p-2 w-100 rounded-0">
+                            <div class="product-item d-flex align-items-center justify-content-between ">
+                                <div class="product-details">
+                                <p class="fa-1xl">Soft chairs </p>
+                                <p class="text-muted fa-1xl">From <br> USD 19</p>
+                                </div>
+                                <div class="product-img">
+                                    <img src="assets/img/products/furniture/04.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card p-2 w-100 rounded-0">
+                            <div class="product-item d-flex align-items-center justify-content-between ">
+                                <div class="product-details">
+                                <p class="fa-1xl">Soft chairs </p>
+                                <p class="text-muted fa-1xl">From <br> USD 19</p>
+                                </div>
+                                <div class="product-img">
+                                    <img src="assets/img/products/furniture/04.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="electronic_accessories-list-down d-flex">
+                        <div class="card p-2 w-100 rounded-0">
+                            <div class="product-item d-flex align-items-center justify-content-between ">
+                                <div class="product-details">
+                                    <p class="fa-1xl">Soft chairs </p>
+                                    <p class="text-muted fa-1xl">From <br> USD 19</p>
+                                </div>
+                                <div class="product-img ">
+                                    <img src="assets/img/products/furniture/04.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card p-2 w-100 rounded-0">
+                            <div class="product-item d-flex align-items-center justify-content-between ">
+                                <div class="product-details">
+                                <p class="fa-1xl">Soft chairs </p>
+                                <p class="text-muted fa-1xl">From <br> USD 19</p>
+                                </div>
+                                <div class="product-img">
+                                    <img src="assets/img/products/furniture/04.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card p-2 w-100 rounded-0">
+                            <div class="product-item d-flex align-items-center justify-content-between ">
+                                <div class="product-details">
+                                <p class="fa-1xl">Soft chairs </p>
+                                <p class="text-muted fa-1xl">From <br> USD 19</p>
+                                </div>
+                                <div class="product-img">
+                                    <img src="assets/img/products/furniture/04.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card p-2 w-100 rounded-0">
+                            <div class="product-item d-flex align-items-center justify-content-between ">
+                                <div class="product-details">
+                                <p class="fa-1xl">Soft chairs </p>
+                                <p class="text-muted fa-1xl">From <br> USD 19</p>
+                                </div>
+                                <div class="product-img">
+                                    <img src="assets/img/products/furniture/04.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="call-to-action my-5">
+        <div class="container call-to-action-banner">
+            <div class=" row p-5 d-flex justify-content-between">
+
+                <div class="col-5">
+                    <h3 class="text-white">An easy way ot send <br> requests to all suppliers</h3>
+                    <p class="text-white mt-3">Lorem ipsum dolor sit amet consectetur adipisicing <br> elit. Dolore, at. Quaerat, et? Molestiae</p>
+                </div>
+
+                <div class="col-7">
+                    <div class="bg-white w-75 p-3 float-end rounded py-3">
+                        <h4 class=" pt-3" >Send quote to suppliers </h4>
+                        <p class="rounded border border-1 py-1 ps-2">What item you need?</p>
+
+                        <textarea class=" rounded border w-100 my-3  ps-2" name="" id="" cols=""  rows="3" placeholder="Type more detail" ></textarea>
+
+                        <div class=" ">
+                             <input type="text" class="border rounded p-2" placeholder="Quantity"> 
+                            <select name="" id="" class="border p-2 rounded bg-white">
+                                <option value="pics">Pics</option>
+                                <option value="foot">Foot</option>
+                                <option value="kg">KG</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary my-3">Send inquiry </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="recommended-products my-5">
+        <div class="container">
+            <h3>Recommended items </h3>
+            <div class="d-flex flex-wrap align-items-start justify-content-xxl-between justify-content-xl-start gap-4 gap-xxl-0">
+
+                <div class="card p-3 mt-3" style="width: 200px;">
+                    <div class="card-img text-center">
+                        <img src="assets/img/products/cloth/Bitmap.png" alt="">
+                    </div>
+                    <h5 class=" mt-5">$10.30</h5>
+                    <p class=" text-muted"> T-shirts with multiple colors, for men</p>
+                </div>
+                <div class="card p-3 mt-3" style="width: 200px;">
+                    <div class="card-img text-center">
+                        <img src="assets/img/products/cloth/Bitmap.png" alt="">
+                    </div>
+                    <h5 class=" mt-5">$10.30</h5>
+                    <p class=" text-muted"> T-shirts with multiple colors, for men</p>
+                </div>
+                <div class="card p-3 mt-3" style="width: 200px;">
+                    <div class="card-img text-center">
+                        <img src="assets/img/products/cloth/Bitmap.png" alt="">
+                    </div>
+                    <h5 class=" mt-5">$10.30</h5>
+                    <p class=" text-muted"> T-shirts with multiple colors, for men</p>
+                </div>
+                <div class="card p-3 mt-3" style="width: 200px;">
+                    <div class="card-img text-center">
+                        <img src="assets/img/products/cloth/Bitmap.png" alt="">
+                    </div>
+                    <h5 class=" mt-5">$10.30</h5>
+                    <p class=" text-muted"> T-shirts with multiple colors, for men</p>
+                </div>
+                <div class="card p-3 mt-3" style="width: 200px;">
+                    <div class="card-img text-center">
+                        <img src="assets/img/products/cloth/Bitmap.png" alt="">
+                    </div>
+                    <h5 class=" mt-5">$10.30</h5>
+                    <p class=" text-muted"> T-shirts with multiple colors, for men</p>
+                </div>
+                <div class="card p-3 mt-3" style="width: 200px;">
+                    <div class="card-img text-center">
+                        <img src="assets/img/products/cloth/Bitmap.png" alt="">
+                    </div>
+                    <h5 class=" mt-5">$10.30</h5>
+                    <p class=" text-muted"> T-shirts with multiple colors, for men</p>
+                </div>
+                <div class="card p-3 mt-3" style="width: 200px;">
+                    <div class="card-img text-center">
+                        <img src="assets/img/products/cloth/Bitmap.png" alt="">
+                    </div>
+                    <h5 class=" mt-5">$10.30</h5>
+                    <p class=" text-muted"> T-shirts with multiple colors, for men</p>
+                </div>
+                <div class="card p-3 mt-3" style="width: 200px;">
+                    <div class="card-img text-center">
+                        <img src="assets/img/products/cloth/Bitmap.png" alt="">
+                    </div>
+                    <h5 class=" mt-5">$10.30</h5>
+                    <p class=" text-muted"> T-shirts with multiple colors, for men</p>
+                </div>
+                <div class="card p-3 mt-3" style="width: 200px;">
+                    <div class="card-img text-center">
+                        <img src="assets/img/products/cloth/Bitmap.png" alt="">
+                    </div>
+                    <h5 class=" mt-5">$10.30</h5>
+                    <p class=" text-muted"> T-shirts with multiple colors, for men</p>
+                </div>
+                <div class="card p-3 mt-3" style="width: 200px;">
+                    <div class="card-img text-center">
+                        <img src="assets/img/products/cloth/Bitmap.png" alt="">
+                    </div>
+                    <h5 class=" mt-5">$10.30</h5>
+                    <p class=" text-muted"> T-shirts with multiple colors, for men</p>
+                </div>
+                <div class="card p-3 mt-3" style="width: 200px;">
+                    <div class="card-img text-center">
+                        <img src="assets/img/products/cloth/Bitmap.png" alt="">
+                    </div>
+                    <h5 class=" mt-5">$10.30</h5>
+                    <p class=" text-muted"> T-shirts with multiple colors, for men</p>
+                </div>
+                <div class="card p-3 mt-3" style="width: 200px;">
+                    <div class="card-img text-center">
+                        <img src="assets/img/products/cloth/Bitmap.png" alt="">
+                    </div>
+                    <h5 class=" mt-5">$10.30</h5>
+                    <p class=" text-muted"> T-shirts with multiple colors, for men</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="extra-services my-5">
+        <div class="container">
+            <h3 class="my-3">Our Extra services </h3>
+            <div class=" d-flex gap-3 justify-content-between align-items-start">
+
+                <div class=" border bg-body">
+                    <div class="">
+                        <img class="w-100" src="assets/img/Extar-services/Mask group.png" alt="">
+                    </div>
+                   <div class="position-relative">
+                    <div class="icon position-absolute border rounded-5 bg-body-tertiary d-flex justify-content-center align-items-center " style="width: 60px ; height: 60px; top: -30%; right: 5%; transform:  translate(-20%, -10%);">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <p class="p-3 fw-medium mb-0">Source from <br> Industry Hubs</p>
+                   </div>
+                </div>
+
+                <div class=" border bg-body">
+                    <div class="">
+                        <img class="w-100" src="assets/img/Extar-services/Mask group.png" alt="">
+                    </div>
+                   <div class="position-relative">
+                    <div class="icon position-absolute border rounded-5 bg-body-tertiary d-flex justify-content-center align-items-center " style="width: 60px ; height: 60px; top: -30%; right: 5%; transform:  translate(-20%, -10%);">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <p class="p-3 fw-medium mb-0">Source from <br> Industry Hubs</p>
+                   </div>
+                </div>
+
+                <div class=" border bg-body">
+                    <div class="">
+                        <img class="w-100" src="assets/img/Extar-services/Mask group.png" alt="">
+                    </div>
+                   <div class="position-relative">
+                    <div class="icon position-absolute border rounded-5 bg-body-tertiary d-flex justify-content-center align-items-center " style="width: 60px ; height: 60px; top: -30%; right: 5%; transform:  translate(-20%, -10%);">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <p class="p-3 fw-medium mb-0">Source from <br> Industry Hubs</p>
+                   </div>
+                </div>
+
+                <div class=" border bg-body">
+                    <div class="">
+                        <img class="w-100" src="assets/img/Extar-services/Mask group.png" alt="">
+                    </div>
+                   <div class="position-relative">
+                    <div class="icon position-absolute border rounded-5 bg-body-tertiary d-flex justify-content-center align-items-center " style="width: 60px ; height: 60px; top: -30%; right: 5%; transform:  translate(-20%, -10%);">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <p class="p-3 fw-medium mb-0">Source from <br> Industry Hubs</p>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+ 
